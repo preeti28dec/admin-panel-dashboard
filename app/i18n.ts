@@ -4,6 +4,11 @@ import i18nBackend from "i18next-http-backend";
 import Italian from "../app/language/it";
 import Hindi from "../app/language/hi";
 import English from "../app/language/en";
+let loadPath = '';
+
+if (typeof window !== 'undefined') {
+  loadPath = `${window.location.origin}/i18n/{{lng}}.json`;
+}
 
 i18n
   .use(i18nBackend)
@@ -15,8 +20,8 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: `${window.location.origin}/i18n/{{lng}}.json`,
-    },
+      loadPath
+      },
     resources: {
       en: {
         translation:English

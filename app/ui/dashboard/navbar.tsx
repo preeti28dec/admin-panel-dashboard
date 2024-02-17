@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import ThemeSwitch from './rightContainer/header/theme-switch'
-import React from 'react'
-import Language from './rightContainer/header/language';
+import styled from "styled-components";
+import React from "react";
+import Language from "./rightContainer/header/language";
 export default function Navbar() {
   return (
-    <NavContainer>      
-        <ThemeSwitch/>
-        <Language/>
+    <NavContainer>
+      <div className="flex justify-center items-center">
+        <Language />
+      </div>
     </NavContainer>
-  )
+  );
 }
 const NavContainer = styled.div`
   width: 97%;
